@@ -29,17 +29,13 @@ object LogisticRegressionLatest {
     val sc = new SparkContext(conf)
 
     /*
-        val spam = sc.textFile("src/main/resources/spam.txt")
-        val ham = sc.textFile("src/main/resources/ham.txt")
 
     val spam = sc.textFile("src/main/resources/ling-spam/spam/");
     val ham = sc.textFile("src/main/resources/ling-spam/ham/")
 
         */
 
-
     val data = sc.textFile("src/main/resources/SMSSpamCollection")
-
 
     val lowercaseData = data.map(_.toLowerCase)
 
